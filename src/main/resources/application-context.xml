@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+	
+ 	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="location">
+			<value>config/config.properties</value>
+		</property>
+	</bean>
+	
+	<bean name="testBean" class="demo.spring_servlet.po.TestBean">
+		<property name="a">
+			<value>${a}</value>
+		</property>
+		<property name="b">
+			<value>${b}</value>
+		</property>
+		<property name="c">
+			<value>${c}</value>
+		</property>
+		<property name="d">
+			<value>${d}</value>
+		</property>
+	</bean>
+
+</beans>
